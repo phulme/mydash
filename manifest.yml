@@ -1,0 +1,14 @@
+applications:
+- memory: 512M
+  domain: mybluemix.net
+  path: .
+  #buildpack: https://github.com/bancha001/bluemix-buildpack-meteor
+  buildpack:  https://github.com/cloudfoundry-community/cf-meteor-buildpack.git
+  host: 3hills
+  name: 3hills
+  disk: 512M
+  services:
+    - mongodb-3hills
+  instances: 1
+  env:
+   MONGO_URL: mongodb://f892ce50-ffb9-4428-a2df-654e0d87675f:5931a445-4688-47be-b3df-7d07e832a432@50.23.230.149:10008/db
